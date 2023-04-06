@@ -1,0 +1,385 @@
+Explanation of the HTML code 
+
+<!DOCTYPE html> is a declaration that tells the browser that this is an HTML document.
+
+<html lang="en"> is the opening tag for the HTML document. The lang attribute specifies the language of the document.
+
+The <head> element contains information about the document, such as the title of the page, metadata, and links to stylesheets and scripts.
+
+The first three meta tags specify the character encoding, compatibility with Internet Explorer, and viewport settings for the document.
+
+The next few lines of code are links to external resources that are used in the application. The first three <link> tags link to Google Fonts, Font Awesome CSS, and a custom CSS file called styles.css, respectively.
+
+The <title> element sets the title of the document, which appears in the browser tab.
+
+The <body> element contains the content that is visible on the webpage.
+
+The <header> element contains a heading that says "My To Do List".
+
+The <form> element is used to create a form for the user to input new to-do items. The form has an <input> element for the user to type in their to-do item and a <button> element to submit the item. The button has an icon that is displayed using Font Awesome.
+
+The <div> element with the class select contains a dropdown menu that allows the user to filter their to-do items by status. The dropdown menu is created using a <select> element with three <option> elements.
+
+The <div> element with the class todo-container is a container for the to-do list items. The list items are displayed as an unordered list (<ul>) with the class todo-list.
+
+The last line of code imports a JavaScript file called script.js that contains the logic for the To-Do List application.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Explanation of the CSS code
+
+The first selector "*{}" selects all HTML elements and applies the following styles:
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+These styles ensure that all HTML elements have zero margin and padding, and that the element's total width and height includes any border or padding, but not the margin.
+
+The second selector "body{}" selects the <body> element and applies the following styles:
+
+background-color: mediumslateblue;
+color: white;
+font-family: "Poppins", sans-serif;
+min-height: 100vh;
+These styles set the background color of the <body> element to "mediumslateblue", the font color to white, the font family to "Poppins", and the minimum height to 100% of the viewport height.
+
+The third selector "header{}" selects the <header> element and sets the font size to 1.5rem.
+
+The fourth selector "header, form{}" selects both the <header> and <form> elements and applies the following styles:
+
+min-height: 20vh;
+display: flex;
+justify-content: center;
+align-items: center;
+These styles set the minimum height of the <header> and <form> elements to 20% of the viewport height, and display them as flex containers with the content centered both vertically and horizontally.
+
+The fifth selector "form input, form button{}" selects both the <input> and <button> elements inside the <form> element and applies the following styles:
+
+padding: 0.5rem;
+padding-left: 1rem;
+font-size: 1.8rem;
+border: none;
+background: white;
+border-radius: 2rem;
+These styles set the padding and font size of the <input> and <button> elements, remove the borders, and give them a white background with a rounded border.
+
+The sixth selector "form button{}" selects only the <button> element inside the <form> element and applies the following additional styles:
+
+color: rgb(255, 200, 0);
+background: white;
+cursor: pointer;
+transition: all 0.3 ease;
+margin-left: 0.5rem;
+These styles set the font color to a golden yellow, change the cursor to a pointer when hovering over the button, and add a transition effect when changing styles.
+
+The seventh selector "form button:hover{}" selects the <button> element inside the <form> element when the mouse hovers over it and applies the following styles:
+
+color: white;
+background: rgb(255, 200, 0);
+These styles change the font color to white and the background color to golden yellow when hovering over the button.
+
+The eighth selector ".fa-plus-circle{}" selects an element with the class name "fa-plus-circle" and applies the following styles:
+
+margin-top: 0.3rem;
+margin-left: -8px;
+These styles move the element 0.3rem down and 8px to the left.
+
+The ninth selector ".todo-container{}" selects an element with the class name "todo-container" and applies the following styles:
+
+display: flex;
+justify-content: center;
+align-items: center;
+These styles set the <div> element with the class name "todo-container" to be displayed as a flex container, with the content centered both horizontally and vertically.
+
+The tenth selector ".todo-list{}" selects an element with the class name "todo-list" and applies the
+
+following styles to it:
+
+min-width: sets the minimum width of the element to 30% of its parent container.
+list-style: removes the default bullet points from the list items within the element.
+The eleventh selector ".todo{}" selects an element with the class name "todo" and applies the following styles:
+
+margin: adds 0.5rem of margin around the element.
+padding-left: adds 0.5rem of padding to the left side of the element.
+background: sets the background color of the element to white.
+color: sets the text color of the element to black.
+font-size: sets the font size of the element to 1.5rem.
+display: sets the display property of the element to "flex".
+justify-content: centers the items horizontally within the element.
+align-items: centers the items vertically within the element.
+transition: adds a 0.5s transition effect to the element.
+border-radius: sets the border radius of the element to 2rem.
+The twelfth selector ".todo li{}" selects the list items within the element with the class name "todo" and applies the following style:
+
+flex: sets the flex property of the list item to 1, which causes it to take up all available space within the flex container.
+The thirteenth and fourteenth selectors ".trash-btn, .complete-btn{}" select elements with the class names "trash-btn" and "complete-btn", respectively, and apply the following styles to both:
+
+color: sets the text color of the element to white.
+border: removes the border from the element.
+padding: adds 1rem of padding to the element.
+cursor: changes the cursor to a pointer when hovering over the element.
+font-size: sets the font size of the element to 1.5rem.
+The fifteenth selector ".complete-btn{}" applies the following additional styles to the element with the class name "complete-btn":
+
+background: sets the background color of the element to rgb(255, 200, 0).
+The sixteenth selector ".trash-btn{}" applies the following additional styles to the element with the class name "trash-btn":
+
+border-top-right-radius: sets the border radius of the top right corner of the element to 1.75rem.
+border-bottom-right-radius: sets the border radius of the bottom right corner of the element to 1.75rem.
+background: sets the background color of the element to rgb(171, 171, 171).
+The seventeenth selector ".todo-item{}" applies the following styles to an element with the class name "todo-item":
+
+padding: adds 0rem of padding around the element.
+The eighteenth selector ".fa-trash, .fa-check-circle{}" selects elements with the class names "fa-trash" and "fa-check-circle", respectively, and applies the following style to both:
+
+pointer-events: sets the pointer events of the element to "none", which means that the element cannot be clicked or interacted with.
+The nineteenth selector ".completed{}" selects elements with the class name "completed" and applies the following styles to them:
+
+text-decoration: adds a line-through text decoration to the element.
+opacity: sets the opacity of the element to 0.5.
+The twentieth selector ".slide{}" applies the following styles to an element with the class name "slide":
+
+transform: translates the element along the x-axis by 10rem.
+opacity: sets the opacity of the element to 0.
+
+
+The twenty-first selector "select {}" selects all the "select" elements and applies the styles within the block to them.
+
+The first rule inside this block sets the appearance of the select element to none, removing the default appearance of the select element in the browser. The outline and border are also set to none, removing any default styling for these elements.
+
+The second rule applies styles to the parent element with the class name "select". It sets margins, overflow, and border-radius properties.
+
+The third rule applies styles to the select element itself. It sets the color of the select element text to a specific shade of yellow, sets the width and height of the select element, sets the cursor to pointer to indicate the select element is clickable, and adds padding to the select element.
+
+Finally, the fourth rule applies styles to the pseudo-element "::after" of the select element, which is used to create a custom dropdown arrow. It sets the content to a Unicode character that renders as a down arrow, sets the position of the arrow to the top right of the parent element, and adds padding. It also sets the background color to a specific shade of yellow, and sets the pointer-events to none, so that the arrow does not interfere with clicking on the select element. The transition property is used to apply a smooth animation when hovering over the select element. When the user hovers over the select element, the arrow's background color and text color change to the inverse of their original values, creating a visual effect to indicate interactivity.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Explanation of the JavaScript code
+
+This function addTodo() is called when the user clicks the "Add" button to add a new todo item. Here is a more detailed explanation of what happens in each step of the function:
+
+event.preventDefault(); - this method prevents the default behavior of the form when the "Add" button is clicked, which is to submit the form to the server and refresh the page.
+
+const todoDiv = document.createElement("div"); - this creates a new <div> element that will hold the entire todo item, including the text, completed button, and delete button.
+
+todoDiv.classList.add("todo"); - this adds the CSS class "todo" to the newly created <div> element.
+
+const newTodo = document.createElement("li"); - this creates a new <li> element that will hold the todo item text.
+
+newTodo.innerText = todoInput.value; - this sets the text of the <li> element to the value entered by the user in the text input field.
+
+newTodo.classList.add("todo-item"); - this adds the CSS class "todo-item" to the <li> element.
+
+todoDiv.appendChild(newTodo); - this appends the <li> element to the todo <div> element created earlier.
+
+saveLocalTodos(todoInput.value); - this calls a function to save the new todo item to the browser's local storage so it can be retrieved later.
+
+const completedButton = document.createElement("button"); - this creates a new <button> element that will be used to mark the todo item as completed.
+
+completedButton.innerHTML = '<i class="fas fa-check-circle"></li>'; - this sets the inner HTML of the button to include a Font Awesome icon for a check circle.
+
+completedButton.classList.add("complete-btn"); - this adds the CSS class "complete-btn" to the completed button.
+
+todoDiv.appendChild(completedButton); - this appends the completed button to the todo <div> element.
+
+const trashButton = document.createElement("button"); - this creates a new <button> element that will be used to delete the todo item.
+
+trashButton.innerHTML = '<i class="fas fa-trash"></li>'; - this sets the inner HTML of the button to include a Font Awesome icon for a trash can.
+
+trashButton.classList.add("trash-btn"); - this adds the CSS class "trash-btn" to the delete button.
+
+todoDiv.appendChild(trashButton); - this appends the delete button to the todo <div> element.
+
+todoList.appendChild(todoDiv); - this appends the entire todo <div> element to the todo list, which is a <ul> element with the class "todo-list".
+
+todoInput.value = ""; - this resets the value of the text input field to an empty string, so the user can enter a new todo item.
+
+
+This code defines the deleteCheck function which is responsible for handling two different types of events: clicking on the "trash" button and clicking on the "complete" button of a to-do item.
+
+When an event is triggered, the first line of the function retrieves the element that triggered the event using the e.target property.
+
+The if statement checks if the clicked element has a class of "trash-btn". If it does, the code proceeds to retrieve the parent element of the clicked button (which is the div containing the entire to-do item) using the parentElement property. Then, the classList.add() method is used to add the "slide" class to the to-do item div, which causes it to slide off the screen using a CSS transition. After adding the class, the removeLocalTodos function is called to remove the to-do item from local storage, and a transitionend event listener is added to the to-do item. When the transition ends, the todo.remove() method is called to remove the to-do item from the DOM.
+
+The second if statement checks if the clicked element has a class of "complete-btn". If it does, the code retrieves the parent element of the clicked button (which is again the div containing the entire to-do item) using the parentElement property. Then, the classList.toggle() method is used to toggle the "completed" class on the to-do item div, which adds a line-through style to the to-do item's text and changes its appearance to indicate that it has been completed.
+
+Overall, this code handles the functionality of marking a to-do item as complete or deleting it from the list.
+
+
+Here is a line-by-line explanation of the filterTodo function:
+
+lua
+Copy code
+function filterTodo (e) {
+This function takes an event (e) as a parameter, which will be triggered by an HTML element, typically a <select> element with options for filtering the list of todos.
+
+arduino
+Copy code
+const todos = todoList.childNodes;
+This line selects all the child nodes (i.e., the individual todo items) of the todoList element and stores them in an array called todos.
+
+javascript
+Copy code
+todos.forEach(function(todo) {
+This line loops through each todo item in the todos array, and for each item, it executes a function that takes todo as a parameter.
+
+scss
+Copy code
+switch(e.target.value) {
+This line begins a switch statement that evaluates the value of the target of the event (i.e., the option selected in the <select> element).
+
+arduino
+Copy code
+case "all":
+If the value is "all", it sets the display property of the todo item to "flex" so that it is visible in the list.
+
+arduino
+Copy code
+todo.style.display = "flex";
+break;
+arduino
+Copy code
+case "completed":
+If the value is "completed", it checks if the todo item has the class "completed". If it does, it sets the display property to "flex", making the item visible. If it does not, it sets the display property to "none", hiding the item.
+
+arduino
+Copy code
+if(todo.classList.contains("completed")) {
+    todo.style.display = "flex";
+} else {
+    todo.style.display = "none";
+}
+break;
+arduino
+Copy code
+case "incomplete":
+If the value is "incomplete", it checks if the todo item does not have the class "completed". If it does not have the class, it sets the display property to "flex", making the item visible. If it does have the class, it sets the display property to "none", hiding the item.
+
+arduino
+Copy code
+if(!todo.classList.contains("completed")) {
+    todo.style.display = "flex";
+} else {
+    todo.style.display = "none";
+}
+break;
+Copy code
+}
+});
+The switch statement ends, and the function ends with the closing brace }. This function allows the user to filter the todo list by completed or incomplete items, or show all items.
+
+here's a breakdown of the saveLocalTodos function:
+
+let todos;: declares a variable todos but doesn't assign a value to it yet.
+
+if(localStorage.getItem("todos") === null) {: checks if the "todos" key in the browser's local storage is null or doesn't exist.
+
+todos = [];: assigns an empty array to the todos variable if there are no saved todos in local storage.
+
+else { todos = JSON.parse(localStorage.getItem("todos")); }: assigns the saved todos from local storage to the todos variable, but first, they must be parsed from their stringified form using the JSON.parse() method.
+
+todos.push(todo);: adds the new todo to the todos array.
+
+localStorage.setItem("todos", JSON.stringify(todos));: saves the updated todos array back to local storage, but first, it must be stringified using the JSON.stringify() method.
+
+
+Sure, here's an explanation of the code line by line:
+
+csharp
+Copy code
+function getLocalTodos() {
+This line starts the declaration of a function called getLocalTodos.
+
+bash
+Copy code
+let todos;
+This line declares a variable called todos which will be used to store the retrieved todo items from the local storage.
+
+javascript
+Copy code
+if(localStorage.getItem("todos") === null) {
+    todos = [];
+} else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+}
+This code block checks if the key "todos" exists in the local storage. If it doesn't exist, an empty array is assigned to the todos variable. If the key exists, its value (which is a string) is retrieved using localStorage.getItem(). Then, JSON.parse() is used to convert the string back to an array and the result is assigned to the todos variable.
+
+javascript
+Copy code
+todos.forEach(function(todo) {
+This line starts a loop that iterates over each element in the todos array. For each element, a new todo item will be created and added to the HTML.
+
+csharp
+Copy code
+const todoDiv = document.createElement("div");
+todoDiv.classList.add("todo");
+These two lines create a new div element that will serve as the container for the todo item and add the "todo" class to it.
+
+csharp
+Copy code
+const newTodo = document.createElement("li");
+newTodo.innerText = todo;
+newTodo.classList.add("todo-item");
+todoDiv.appendChild(newTodo);
+These lines create a new li element that will contain the todo item's text, set its text to the value of the current todo element in the loop, add the "todo-item" class to it, and then append it as a child of the todoDiv container.
+
+csharp
+Copy code
+const completedButton = document.createElement("button");
+completedButton.innerHTML = '<i class="fas fa-check-circle"></li>';
+completedButton.classList.add("complete-btn");
+todoDiv.appendChild(completedButton);
+These lines create a new button element that will serve as the "completed" button for the todo item, set its inner HTML to an icon (using Font Awesome), add the "complete-btn" class to it, and then append it as a child of the todoDiv container.
+
+csharp
+Copy code
+const trashButton = document.createElement("button");
+trashButton.innerHTML = '<i class="fas fa-trash"></li>';
+trashButton.classList.add("trash-btn");
+todoDiv.appendChild(trashButton);
+These lines create a new button element that will serve as the "delete" button for the todo item, set its inner HTML to an icon (using Font Awesome), add the "trash-btn" class to it, and then append it as a child of the todoDiv container.
+
+scss
+Copy code
+todoList.appendChild(todoDiv);
+This line appends the todoDiv container (which contains the todo item, completed button, and trash button) to the todoList element in the HTML.
+
+Copy code
+});
+This curly bracket closes the loop that iterates over each element in the todos array.
+
+Finally, this function ends its declaration, but it will not be executed until it is called. When it is called, it will retrieve the stored todos from the local storage, create HTML elements for each of them, and add them to the web page.
+
+
+line-by-line explanation of the removeLocalTodos function:
+
+javascript
+Copy code
+function removeLocalTodos(todo) {
+This is the start of the removeLocalTodos function that takes a todo as an argument.
+
+javascript
+Copy code
+let todos;
+if(localStorage.getItem("todos") === null) {
+    todos = [];
+} else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+}
+This code first initializes a variable todos to undefined. Then it checks if there are any todos saved in the local storage. If there are no saved todos, the todos variable is set to an empty array. If there are saved todos, the todos variable is set to the parsed JSON value of the saved todos.
+
+arduino
+Copy code
+const todoIndex = todo.children[0].innerText;
+This code gets the index of the todo passed as an argument by accessing the first child of todo and getting its innerText.
+
+less
+Copy code
+todos.splice(todos.indexOf(todoIndex), 1);
+This code removes the todo with the specified todoIndex from the todos array.
+
+javascript
+Copy code
+localStorage.setItem("todos", JSON.stringify(todos));
+Finally, this code saves the updated todos array to local storage by stringifying it and setting it as the value for the "todos" key.
